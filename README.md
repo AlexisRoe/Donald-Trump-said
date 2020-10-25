@@ -10,12 +10,21 @@
                  / ___ \|  __/| |  | |_| | (_| | | | | | |  __/
                 /_/   \_\_|  |___|  \____|\__,_|_| |_| |_|\___|
 
-
-
-
 ## About the Trondald Dump API Game
 
-A Game where you have to guess what the #/.\$&! the Trump is talking about.
+A Game where you have to guess what the #/.\$&! the Trump is talking about. Try to conquer the smartest guy in the world.
+
+This is my version of team project in the 4th week of the Neue Fische Bootcamp in 2020. There is still a lot to do. Please Review, open Issues as you like. Mabye someday i will refactore it ;-)
+
+In the end. Have fun.
+
+## What technics are used
+
+- webpack
+- Javascript Component Approach
+- Using a free-to-use Api
+- store date in the localStorage
+- HTML and CSS
 
 ## Resources
 
