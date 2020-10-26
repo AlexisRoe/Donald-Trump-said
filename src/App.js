@@ -65,7 +65,8 @@ function App() {
 
       if (!gameInfo.answers[answerPlayer].includes(gameInfo.correctAnswer)) {
         mainElement.innerHTML = "";
-        const meme = Meme(`${playerName}! You are fired`, `loose all points`);
+        const meme = Meme(`I knew you're Fake News. I was talking about ${gameInfo.correctAnswer}.`,
+        `${playerName}! You are fired!`);
         mainElement.append(meme);
         points.innerText = deletePlayer(playerName);
       }
