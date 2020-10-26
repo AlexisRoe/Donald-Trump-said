@@ -14,7 +14,7 @@
 
 A Game where you have to guess what the #/.\$&! the Trump is talking about. Try to conquer the smartest guy in the world.
 
-This is my version of team project in the 4th week of the Neue Fische Bootcamp in 2020. There is still a lot to do. Please Review, open Issues as you like. Mabye someday i will refactore it ;-)
+This is my version of team project in the 4th week of the Neue Fische Bootcamp in 2020. There is still a lot to do. Please Review, open Issues as you like. Mabye someday i will refactore it ;-)...
 
 In the end. Have fun.
 
