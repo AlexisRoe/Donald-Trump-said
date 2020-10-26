@@ -4,7 +4,7 @@ import Header from "./components/Header";
 
 import Footer from "./components/Footer";
 import Loginform from "./components/Login";
-import Meme from "./components/Meme";
+import { Meme, Placeholder } from "./components/Meme";
 import Main from "./components/Main";
 import Modal from "./components/Modal";
 
@@ -14,7 +14,6 @@ import deletePlayer from "./utils/localStorage/deletePlayer";
 import { getRandomQuote, getAllTags } from "./utils/api";
 
 import { createElement } from "./utils/elements";
-
 
 function App() {
   // configuration default
@@ -35,7 +34,7 @@ function App() {
       nextGameInfo = getQuestionInfo(playerName);
       // Placeholder during loading new content
       mainElement.innerHTML = "";
-      const meme = Meme(placeholder, "Donald Trump");
+      const meme = Placeholder(placeholder, "Donald Trump");
       mainElement.append(meme);
       gameEngine();
     },
@@ -44,9 +43,7 @@ function App() {
 
   // Game Engine
   async function gameEngine(answerPlayer = -1) {
-    
     if (answerPlayer !== -1) {
-      
       if (gameInfo.correctAnswer === -1) {
         mainElement.innerHTML = "";
         const meme = Meme(
@@ -65,8 +62,10 @@ function App() {
 
       if (!gameInfo.answers[answerPlayer].includes(gameInfo.correctAnswer)) {
         mainElement.innerHTML = "";
-        const meme = Meme(`I knew you're Fake News. I was talking about ${gameInfo.correctAnswer}.`,
-        `${playerName}! You are fired!`);
+        const meme = Meme(
+          `I knew you're Fake News. I was talking about ${gameInfo.correctAnswer}.`,
+          `${playerName}! You are fired!`
+        );
         mainElement.append(meme);
         points.innerText = deletePlayer(playerName);
       }
