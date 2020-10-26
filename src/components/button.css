@@ -3,40 +3,33 @@
   padding: 0.5rem 2rem 0.5rem 2rem;
   background: none;
   border: none;
+  color: white;
+  border: 1px solid white;
   font-size: clamp(0.6rem, 1.2rem, 1.5vw);
+  cursor: pointer;
 }
 
 .btn--Head-Disabled {
   border: 1px solid #333;
   color: #333;
-}
-
-.btn--Head {
-  border: 1px solid white;
-  color: white;
-  cursor: pointer;
+  cursor: initial;
 }
 
 .btn--close {
   width: 3rem;
   height: 3rem;
   background: none;
-  border: 1px solid white;
-  color: white;
   font-size: 2rem;
-  border-radius: 50%;
-  cursor: pointer;
   margin-right: 1rem;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
 .btn--login {
   margin-top: 1vw;
   border-radius: 50px;
-  padding: 1rem 7vw 1rem 7vw;
+  padding: 0.8rem 5vw 0.8rem 5vw;
   background: none;
-  border: 1px solid white;
-  color: white;
-  cursor: pointer;
   font-size: clamp(1rem, 2vw, 2.5vw);
 }
 
@@ -50,23 +43,6 @@
   margin-top: 2rem;
 }
 
-.btn-one {
-  border: 1px solid white;
-  color: white;
-  cursor: pointer;
-}
-
-.btn-two {
-  border: 1px solid white;
-  color: white;
-  cursor: pointer;
-}
-
-.btn-three {
-  border: 1px solid white;
-  color: white;
-  cursor: pointer;
-}
 
 .btn--login:hover,
 .btn--close:hover,
@@ -74,7 +50,9 @@
 .btn-one:hover,
 .btn-two:hover,
 .btn-three:hover {
-  border: 1px solid #333;
-  color: rgb(75, 75, 75);
-  background-color: white;
+  color: #652d73;
+  background: white;
+  border-color: white;
+  box-shadow: 0px 16px 16px -8px rgba(7, 1, 90, 0.4);
+  transform: scale(1.1);
 }
