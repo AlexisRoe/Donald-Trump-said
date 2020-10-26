@@ -20,6 +20,7 @@ function App() {
   // configuration default
   let gameInfo = null;
   let playerName = null;
+  let nextGameInfo = null;
   const placeholder =
     "I've always won, and I'm going to continue to win. And that's the way it is.";
 
@@ -30,6 +31,8 @@ function App() {
   const loginForm = Loginform({
     onsubmit: (event) => {
       playerName = event;
+      // Frage vorladen Z.77/78
+      nextGameInfo = getQuestionInfo(playerName);
       // Placeholder during loading new content
       mainElement.innerHTML = "";
       const meme = Meme(placeholder, "Donald Trump");
@@ -68,8 +71,9 @@ function App() {
       }
     }
 
-    gameInfo = await getQuestionInfo(playerName);
-    points.innerText = gameInfo.score;
+    gameInfo = await nextGameInfo;
+    points.innerText = getScore(playerName);
+    nextGameInfo = getQuestionInfo(playerName);
     setTimeout(() => {
       generateGameField();
     }, 2500);
@@ -87,6 +91,7 @@ function App() {
   footerElement.append(points);
 
   function generateGameField() {
+    points.innerText = getScore(playerName);
     const meme = Meme(gameInfo.quote);
     const buttonContainer = createElement("div", {
       className: "buttonContainer",

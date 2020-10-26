@@ -74,7 +74,9 @@
 .btn-one:hover,
 .btn-two:hover,
 .btn-three:hover {
-  border: 1px solid #333;
-  color: rgb(75, 75, 75);
-  background-color: white;
+  color: #652d73;
+  background: white;
+  border-color: white;
+  box-shadow: 0px 16px 16px -8px rgba(7, 1, 90, 0.4);
+  transform: scale(1.1);
 }

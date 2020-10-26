@@ -1,4 +1,4 @@
-import "./button.css";
+import "./Button.css";
 import { createElement } from "../utils/elements";
 
 function Button(props) {
